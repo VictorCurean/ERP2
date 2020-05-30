@@ -1,0 +1,17 @@
+<mvc:View xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+	xmlns:smartTable="sap.ui.comp.smarttable" xmlns:html="http://www.w3.org/1999/xhtml"
+	controllerName="org.ubb.books.controller.BookListController" height="100%">
+	<Page id="booksPage" navButtonPress="onNavBack" showNavButton="false">
+		<content>
+			<smartTable:SmartTable id="checkoutsSmartTable" entitySet="CheckedOutBooks" tableType="ResponsiveTable" smartFilterId="smartFilterBar"
+				placeToolbarInTable="true" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="false" useTablePersonalisation="true"
+				header="Line Items" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored" enableAutoBinding="true" demandPopin="true"
+				class="sapUiResponsiveContentPadding sapUiSizeCompact"
+				initiallyVisibleFields="ISBN,Author,Title,Firstname,Lastname,DateOfCheckout,DateOfReturn">
+				<smartTable:layoutData>
+					<FlexItemData growFactor="1"/>
+				</smartTable:layoutData>
+			</smartTable:SmartTable>
+		</content>
+	</Page>
+</mvc:View>
